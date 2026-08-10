@@ -144,7 +144,7 @@ npm run dev
 
 ## 🌐 Live Demo
 
-**[Открыть приложение](live-demo-url)**
+**[Открыть приложение](https://vk-cinema-gamma.vercel.app/)**
 
 ## 📚 О проекте
 
