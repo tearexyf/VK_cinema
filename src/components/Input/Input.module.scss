@@ -1,0 +1,55 @@
+@use "../../styles/global/variables" as vars;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: vars.$spacing-sm;
+  border: 1px solid transparent;
+  border-radius: vars.$border-radius-sm;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+}
+
+.light {
+  background-color: vars.$color-surface;
+
+  .input {
+    color: #0f1220;
+
+    &::placeholder {
+      color: vars.$color-text-muted;
+    }
+  }
+}
+
+.dark {
+  background-color: vars.$color-secondary;
+}
+
+.error {
+  border-color: vars.$color-border-error;
+}
+
+.icon {
+  color: vars.$color-text-secondary;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: vars.$color-text;
+  font-size: vars.$font-size-base;
+  outline: none;
+  padding: 16px;
+  &:focus-within {
+    border-color: vars.$color-primary;
+  }
+
+  &::placeholder {
+    color: vars.$color-text-secondary;
+  }
+}

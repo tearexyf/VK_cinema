@@ -1,0 +1,35 @@
+@use "../../styles/global/variables" as vars;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-xxl;
+}
+
+.topSection {
+  padding: 0 vars.$spacing-xxl vars.$spacing-xxl;
+}
+
+.sectionTitle {
+  font-size: vars.$font-size-xl;
+  font-weight: 700;
+  margin-bottom: vars.$spacing-lg;
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: vars.$spacing-lg;
+}
+
+@media (max-width: 1024px) {
+  .topGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .topGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

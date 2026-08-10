@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #3a4159;
+  border-radius: 8px;
+  background-color: rgba(39, 36, 36, 0.7);
+  transition: border-color 0.2s ease;
+}
+.wrapper:focus-within {
+  border-color: rgb(103, 165, 235);
+}
+
+.error {
+  border-color: #e04040;
+}
+
+.icon {
+  color: #9aa1b5;
+  display: flex;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+}
+.input::-moz-placeholder {
+  color: #9aa1b5;
+}
+.input::placeholder {
+  color: #9aa1b5;
+}/*# sourceMappingURL=Input.module.css.map */

@@ -1,0 +1,28 @@
+.button {
+  padding: 8px 24px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  background-color: #4d7dfe;
+  color: #ffffff;
+}
+.primary:hover:not(:disabled) {
+  background-color: #3968f0;
+}
+
+.secondary {
+  background-color: #343b58;
+  color: #ffffff;
+}
+.secondary:hover:not(:disabled) {
+  background-color: #3f4870;
+}/*# sourceMappingURL=Button.module.css.map */

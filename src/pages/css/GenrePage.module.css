@@ -1,0 +1,26 @@
+.page {
+  padding: 48px;
+}
+
+.title {
+  font-size: 32px;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}/*# sourceMappingURL=GenrePage.module.css.map */

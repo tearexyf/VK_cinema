@@ -1,0 +1,1 @@
+{"version":3,"sources":["../Loader/Loader.module.scss","../../styles/global/_mixins.scss","Loader.module.css"],"names":[],"mappings":"AAEA;EC0BE,aAAA;EACA,mBAAA;EACA,uBAAA;ED1BA,WAAA;EACA,YAAA;AECF;;AFEA;EACE,WAAA;EACA,YAAA;EACA,0CAAA;EACA,yBAAA;EACA,kBAAA;EACA,oCAAA;AECF;;AFEA;EACE;IAAK,yBAAA;EEEL;AACF","file":"Loader.module.css"}

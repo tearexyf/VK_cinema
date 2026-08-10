@@ -1,0 +1,107 @@
+@use "../../styles/global/variables" as vars;
+@use "../../styles/global/mixins" as mix;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: vars.$spacing-xl;
+  padding: vars.$spacing-lg vars.$spacing-xxl;
+}
+
+.nav {
+  display: flex;
+  gap: vars.$spacing-lg;
+}
+
+.navLink {
+  color: vars.$color-text-secondary;
+  font-weight: 500;
+  padding-bottom: vars.$spacing-xs;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: vars.$color-text;
+  }
+}
+
+.navLink.active {
+  color: vars.$color-text;
+  border-bottom-color: vars.$color-bottom;
+}
+
+.searchWrapper {
+  width: 100%;
+  max-width: 655px;
+}
+
+.rightSection {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.loginButton {
+  color: vars.$color-text;
+  font-weight: 500;
+}
+
+.userName {
+  color: vars.$color-text;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  &:focus{
+    border-bottom-color: vars.$color-bottom;  
+  }
+  
+
+}
+
+.mobileActions {
+  display: none;
+  margin-left: auto;
+  align-items: center;
+  gap: vars.$spacing-sm;
+}
+
+.mobileIconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: vars.$color-text;
+  width: 32px;
+  height: 32px;
+}
+
+.mobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-md;
+  padding: vars.$spacing-md vars.$spacing-lg;
+  background-color: #14172a;
+  border-bottom: 1px solid vars.$color-border;
+  z-index: 10;
+}
+
+@include mix.respond-to("mobile") {
+  .header {
+    position: relative;
+    padding: vars.$spacing-md vars.$spacing-lg;
+  }
+
+  .nav,
+  .searchWrapper,
+  .rightSection {
+    display: none;
+  }
+
+  .mobileActions {
+    display: flex;
+  }
+}

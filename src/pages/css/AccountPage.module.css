@@ -1,0 +1,97 @@
+.page {
+  padding: 48px;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.tabs {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #363c5c;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 8px;
+  color: #9aa1b8;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease;
+}
+.tab:hover {
+  color: #ffffff;
+}
+.tab.active {
+  color: #ffffff;
+  border-bottom-color: #4d7dfe;
+}
+
+.emptyText {
+  color: #9aa1b8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 400px;
+}
+
+.settingsRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #363c5c;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #343b58;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.fieldLabel {
+  color: #9aa1b8;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.fieldValue {
+  font-weight: 600;
+}
+
+.logoutButton {
+  align-self: flex-start;
+  margin-top: 16px;
+}/*# sourceMappingURL=AccountPage.module.css.map */

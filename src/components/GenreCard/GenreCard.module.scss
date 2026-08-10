@@ -1,0 +1,33 @@
+@use "../../styles/global/variables" as vars;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: vars.$border-radius-md;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #000; 
+
+  &:hover .image {
+    transform: scale(1.05);
+  }
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.label {
+  padding: vars.$spacing-md vars.$spacing-lg;
+  background-color: #000;
+}
+
+.name {
+  color: vars.$color-text;
+  font-weight: 700;
+  font-size: vars.$font-size-large;
+}

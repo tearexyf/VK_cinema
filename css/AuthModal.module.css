@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #ffffff;
+}
+
+.link {
+  color: #4d7dfe;
+  text-align: center;
+}
+
+.error {
+  color: #e5484d;
+  font-size: 14px;
+}/*# sourceMappingURL=AuthModal.module.css.map */

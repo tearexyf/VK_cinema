@@ -1,0 +1,28 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.content {
+  position: relative;
+  background-color: #252b3d;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #9aa1b5;
+}
+.closeButton:hover {
+  color: #ffffff;
+}/*# sourceMappingURL=Modal.module.css.map */

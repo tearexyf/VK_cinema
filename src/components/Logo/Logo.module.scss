@@ -1,0 +1,28 @@
+@use "../../styles/global/variables" as vars;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: vars.$spacing-sm;
+}
+
+.icon {
+  width: 28px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 25%,
+    #5ffbf1 0%,
+    #00d4ff 25%,
+    #2979ff 50%,
+    #b347e8 80%,
+    #e896f5 100%
+  );
+  flex-shrink: 0;
+}
+
+.text {
+  font-weight: 700;
+  font-size: vars.$font-size-large;
+  color: vars.$color-text;
+}

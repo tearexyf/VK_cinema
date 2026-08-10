@@ -1,0 +1,29 @@
+.page {
+  padding: 48px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.emptyText {
+  color: #9aa1b8;
+}/*# sourceMappingURL=GenresPage.module.css.map */

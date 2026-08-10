@@ -1,0 +1,33 @@
+@use "../../styles/global/variables" as vars;
+
+.button {
+  padding: vars.$spacing-sm vars.$spacing-lg;
+  border-radius: vars.$border-radius-pill;
+  font-size: vars.$font-size-base;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.primary {
+  background-color: vars.$color-primary;
+  color: vars.$color-text;
+
+  &:hover:not(:disabled) {
+    background-color: vars.$color-primary-hover;
+  }
+}
+
+.secondary {
+  background-color: vars.$color-secondary;
+  color: vars.$color-text;
+
+  &:hover:not(:disabled) {
+    background-color: vars.$color-secondary-hover;
+  }
+}

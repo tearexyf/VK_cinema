@@ -1,0 +1,43 @@
+@use "../../styles/global/variables" as vars;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-md;
+  min-width: 320px;
+  width: 100%;
+  max-width: 100%;
+  color: vars.$color-text;
+  background-color: #1a1e33;
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$border-radius-md;
+  padding: vars.$spacing-lg;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-sm;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.resultItem {
+  display: flex;
+  align-items: center;
+  gap: vars.$spacing-sm;
+  cursor: pointer;
+  padding: vars.$spacing-sm;
+  border-radius: vars.$border-radius-sm;
+
+  &:hover {
+    background-color: vars.$color-card-overlay;
+  }
+}
+
+.thumb {
+  width: 40px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+}

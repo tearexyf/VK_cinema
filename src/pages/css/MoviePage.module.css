@@ -1,0 +1,76 @@
+.page {
+  padding: 32px;
+  color: #ffffff;
+}
+
+.hero {
+  display: flex;
+  gap: 32px;
+}
+
+.poster {
+  width: 320px;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  color: #9aa1b8;
+}
+
+.title {
+  font-size: 32px;
+}
+
+.plot {
+  color: #9aa1b8;
+  max-width: 600px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.favoriteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #343b58;
+  color: #ffffff;
+}
+.favoriteButton.active {
+  color: #8b5cf6;
+}
+
+.details {
+  margin-top: 32px;
+}
+
+.detailsList {
+  margin-top: 16px;
+}
+
+.detailsRow {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #363c5c;
+  padding: 8px 0;
+  max-width: 500px;
+}
+.detailsRow dt {
+  color: #9aa1b8;
+}/*# sourceMappingURL=MoviePage.module.css.map */

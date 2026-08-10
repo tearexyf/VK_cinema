@@ -1,0 +1,37 @@
+@use "variables" as vars;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-base;
+  color: vars.$color-text;
+  background: linear-gradient(180deg, vars.$color-bg-top 0%, vars.$color-bg-bottom 100%);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

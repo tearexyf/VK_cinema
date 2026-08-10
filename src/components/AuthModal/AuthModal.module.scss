@@ -1,0 +1,29 @@
+@use "../../styles/global/variables" as vars;
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color:black;
+}
+.input{
+  border:1px solid vars.$color-surface-border;
+  border-radius:8px;
+}
+
+.link {
+  color: vars.$color-primary;
+  text-align: center;
+}
+
+.error {
+  color: vars.$color-error;
+  font-size: vars.$font-size-small;
+}

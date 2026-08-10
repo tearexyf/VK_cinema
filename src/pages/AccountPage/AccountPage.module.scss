@@ -1,0 +1,102 @@
+@use "../../styles/global/variables" as vars;
+@use "../../styles/global/mixins" as mix;
+
+.page {
+  padding: vars.$spacing-xxl;
+}
+
+.title {
+  font-size: vars.$font-size-heading;
+  margin-bottom: vars.$spacing-lg;
+}
+
+.tabs {
+  display: flex;
+  gap: vars.$spacing-xl;
+  margin-bottom: vars.$spacing-xl;
+  border-bottom: 1px solid vars.$color-border;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: vars.$spacing-xs;
+  padding-bottom: vars.$spacing-sm;
+  color: vars.$color-text-secondary;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: vars.$color-text;
+  }
+
+  &.active {
+    color: vars.$color-text;
+    border-bottom-color: vars.$color-primary;
+  }
+}
+
+.emptyText {
+  color: vars.$color-text-secondary;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: vars.$spacing-lg;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-lg;
+  max-width: 400px;
+}
+
+.settingsRow {
+  display: flex;
+  align-items: center;
+  gap: vars.$spacing-md;
+  padding-bottom: vars.$spacing-lg;
+  border-bottom: 1px solid vars.$color-border;
+}
+
+.avatar {
+  @include mix.flex-center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: vars.$color-secondary;
+  font-weight: 700;
+  font-size: vars.$font-size-small;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.fieldLabel {
+  color: vars.$color-text-secondary;
+  font-size: vars.$font-size-small;
+  margin-bottom: 2px;
+}
+
+.fieldValue {
+  font-weight: 600;
+}
+
+.logoutButton {
+  align-self: flex-start;
+  margin-top: vars.$spacing-md;
+}

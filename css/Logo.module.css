@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #4d8eff);
+}
+
+.text {
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}/*# sourceMappingURL=Logo.module.css.map */

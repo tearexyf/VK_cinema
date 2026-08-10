@@ -1,0 +1,109 @@
+@use "../../styles/global/variables" as vars;
+@use "../../styles/global/mixins" as mix;
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: vars.$spacing-xl;
+  padding: vars.$spacing-xxl;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-md;
+  max-width: 100%;
+}
+
+.meta {
+  display: flex;
+  gap: vars.$spacing-md;
+  align-items: center;
+  font-size: vars.$font-size-small;
+  color: vars.$color-text-secondary;
+}
+
+.rating {
+  padding: 2px 10px;
+  border-radius: vars.$border-radius-pill;
+  color: vars.$color-text;
+  font-weight: 600;
+  font-size: vars.$font-size-small;
+}
+
+.ratingHigh { background-color: vars.$color-rating-high; }
+.ratingMid { background-color: vars.$color-rating-mid; }
+.ratingLow { background-color: vars.$color-rating-low; }
+
+.title {
+  font-size: vars.$font-size-heading;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.plot {
+  color: vars.$color-text-secondary;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: vars.$spacing-sm;
+  margin-top: vars.$spacing-sm;
+}
+
+.trailerButton {
+  background-color: vars.$color-primary;
+  color: vars.$color-text;
+  padding: vars.$spacing-sm vars.$spacing-xl;
+  border-radius: vars.$border-radius-pill;
+  font-weight: 500;
+
+  &:hover {
+    background-color: vars.$color-primary-hover;
+  }
+}
+
+.infoButton {
+  background-color: vars.$color-secondary;
+  color: vars.$color-text;
+  padding: vars.$spacing-sm vars.$spacing-xl;
+  border-radius: vars.$border-radius-pill;
+  font-weight: 500;
+
+  &:hover {
+    background-color: vars.$color-secondary-hover;
+  }
+}
+
+.favoriteButton {
+  @include mix.icon-button;
+
+  &.active {
+    color: vars.$color-favorite;
+  }
+}
+
+.refreshButton {
+  @include mix.icon-button;
+}
+
+.poster {
+  width: 680px;
+  max-width: 45vw;
+  max-height: 522px;
+  border-radius: vars.$border-radius-lg;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@include mix.respond-to("tablet") {
+  .card {
+    flex-direction: column-reverse;
+  }
+  .poster {
+    width: 100%;
+    max-width: 100%;
+  }
+}

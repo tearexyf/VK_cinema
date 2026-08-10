@@ -1,0 +1,78 @@
+@use "../../styles/global/variables" as vars;
+@use "../../styles/global/mixins" as mix;
+
+.page {
+  padding: vars.$spacing-xl;
+  color: vars.$color-text;
+}
+
+.hero {
+  display: flex;
+  gap: vars.$spacing-xl;
+}
+
+.poster {
+  width: 320px;
+  border-radius: vars.$border-radius-md;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-md;
+}
+
+.meta {
+  display: flex;
+  gap: vars.$spacing-md;
+  color: vars.$color-text-secondary;
+}
+
+.title {
+  font-size: vars.$font-size-heading;
+}
+
+.plot {
+  color: vars.$color-text-secondary;
+  max-width: 600px;
+}
+
+.actions {
+  display: flex;
+  gap: vars.$spacing-sm;
+  align-items: center;
+}
+
+.favoriteButton {
+  @include mix.flex-center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: vars.$color-secondary;
+  color: vars.$color-text;
+
+  &.active {
+    color: vars.$color-favorite;
+  }
+}
+
+.details {
+  margin-top: vars.$spacing-xl;
+}
+
+.detailsList {
+  margin-top: vars.$spacing-md;
+}
+
+.detailsRow {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted vars.$color-border;
+  padding: vars.$spacing-sm 0;
+  max-width: 500px;
+
+  dt {
+    color: vars.$color-text-secondary;
+  }
+}

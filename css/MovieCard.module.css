@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgb(0, 0, 0), #2a3149);
+}
+
+.poster {
+  width: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  color: #9aa1b5;
+  align-items: center;
+}
+
+.rating {
+  padding: 2px 8px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.ratingHigh {
+  background-color: #3ec96e;
+}
+
+.ratingMid {
+  background-color: #f2b705;
+}
+
+.ratingLow {
+  background-color: #e0405b;
+}
+
+.title {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.plot {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #9aa1b5;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.trailerButton {
+  background-color: #4d8eff;
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.favoriteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3a4159;
+  color: #ffffff;
+}
+.favoriteButton.active {
+  color: #8b5cf6;
+}/*# sourceMappingURL=MovieCard.module.css.map */

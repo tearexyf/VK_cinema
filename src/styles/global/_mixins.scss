@@ -1,0 +1,56 @@
+@use "breakpoints" as bp;
+@use "variables" as vars;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: bp.$breakpoint-mobile) { @content; }
+  }
+  @if $breakpoint == "tablet" {
+    @media (max-width: bp.$breakpoint-tablet) { @content; }
+  }
+  @if $breakpoint == "desktop" {
+    @media (max-width: bp.$breakpoint-desktop) { @content; }
+  }
+}
+
+@mixin text-ellipsis($lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if $lines == 1 {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin icon-button($size: 40px) {
+  @include flex-center;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: vars.$color-secondary;
+  color: vars.$color-text;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: vars.$color-secondary-hover;
+  }
+}
+
+@mixin poster-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: vars.$color-card-overlay;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  @include flex-center;
+}

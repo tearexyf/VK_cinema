@@ -1,0 +1,54 @@
+@use "../../styles/global/variables" as vars;
+@use "../../styles/global/mixins" as mix;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 12, 22, 0.7);
+  @include mix.flex-center;
+  z-index: 1000;
+}
+
+.content {
+  position: relative;
+  background-color: vars.$color-surface;
+  border-radius: vars.$border-radius-md;
+  border:1px solid vars.$color-surface-border;
+  padding: vars.$spacing-xl;
+  max-width: 400px;
+  width: 100%;
+}
+
+.plain {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  max-width: 900px;
+}
+
+.closeButton {
+  position: absolute;
+  top: vars.$spacing-md;
+  right: vars.$spacing-md;
+  color: vars.$color-text-secondary;
+
+  &:hover {
+    color: vars.$color-text;
+  }
+}
+
+.closeButtonPlain {
+  @include mix.flex-center;
+  top: -14px;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: vars.$color-surface;
+  color: #0f1220;
+
+  &:hover {
+    color: #0f1220;
+    background-color: vars.$color-surface-hover;
+  }
+}
