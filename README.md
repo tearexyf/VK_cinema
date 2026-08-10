@@ -1,75 +1,155 @@
-# React + TypeScript + Vite
+# 🎬 Cinema Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для поиска и просмотра информации о фильмах, разработанное на **React и TypeScript**.
 
-Currently, two official plugins are available:
+Приложение позволяет искать фильмы, просматривать их по жанрам, получать подробную информацию, смотреть трейлеры и сохранять понравившиеся фильмы в избранное.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Возможности
 
-## React Compiler
+* 🔎 Поиск фильмов по названию
+* 🎬 Просмотр подробной информации о фильме
+* 🎞️ Просмотр трейлеров
+* 🎭 Просмотр фильмов по жанрам
+* ⭐ Топ-10 фильмов по рейтингу IMDb
+* 🎲 Случайный выбор фильма
+* ❤️ Добавление и удаление фильмов из избранного
+* 🔐 Регистрация и авторизация пользователей
+* 👤 Личный аккаунт пользователя
+* 📚 Просмотр списка избранных фильмов
+* 📱 Адаптивный интерфейс
+* ♾️ Динамическая загрузка фильмов при прокрутке
+* 🔄 Сохранение авторизации и избранных фильмов после обновления страницы
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Технологии
 
-## Expanding the ESLint configuration
+* **React**
+* **TypeScript**
+* **React Router**
+* **Axios**
+* **SCSS**
+* **REST API**
+* **Vite**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📄 Страницы приложения
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Главная
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+На главной странице пользователь может:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* получить случайный фильм;
+* посмотреть информацию о предложенном фильме;
+* ознакомиться с топ-10 фильмов по рейтингу IMDb.
 
+### Жанры
+
+Отдельная страница со списком доступных жанров.
+
+При выборе жанра пользователь переходит к списку фильмов соответствующей категории.
+
+### Страница жанра
+
+Фильмы отображаются в виде карточек и сортируются по рейтингу.
+
+Первые 10 фильмов загружаются сразу, следующие фильмы подгружаются при прокрутке страницы.
+
+### Страница фильма
+
+Содержит:
+
+* обложку;
+* подробную информацию;
+* рейтинг;
+* кнопку просмотра трейлера;
+* кнопку добавления фильма в избранное.
+
+### Авторизация и регистрация
+
+Для добавления фильмов в избранное пользователь должен авторизоваться.
+
+После успешной авторизации пользователь получает доступ к личному аккаунту и списку избранных фильмов.
+
+Авторизация реализована через серверную сессию и cookies.
+
+### Личный аккаунт
+
+В аккаунте пользователь может:
+
+* просматривать личную информацию;
+* просматривать избранные фильмы;
+* выйти из аккаунта.
+
+### Поиск
+
+Поиск позволяет найти фильм по его названию и перейти на страницу выбранного фильма.
+
+## 🔌 API
+
+Приложение взаимодействует с REST API для получения:
+
+* списка фильмов;
+* информации о конкретном фильме;
+* жанров;
+* результатов поиска;
+* данных пользователя;
+* списка избранных фильмов.
+
+Для запросов используется **Axios**.
+
+При работе с авторизацией используются cookies и передача credentials для кросс-доменных запросов.
+
+## 📂 Структура проекта
+
+Проект организован по функциональным областям:
+
+```text
+src/
+├── components/
+├── pages/
+├── api/
+├── hooks/
+├── types/
+├── styles/
+└── ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Компоненты, страницы, стили и работа с API разделены по отдельным директориям для удобства поддержки проекта.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Запуск проекта
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Клонируйте репозиторий:
 
+```bash
+git clone <repository-url>
 ```
+
+Перейдите в директорию проекта:
+
+```bash
+cd <project-folder>
+```
+
+Установите зависимости:
+
+```bash
+npm install
+```
+
+Запустите проект в режиме разработки:
+
+```bash
+npm run dev
+```
+
+После запуска приложение будет доступно по адресу, который укажет Vite в терминале.
+
+## 🌐 Live Demo
+
+**[Открыть приложение](live-demo-url)**
+
+## 📚 О проекте
+
+Проект выполнен в рамках финальной работы курса **React.js**.
+
+Цель проекта — разработать полноценную платформу для поиска фильмов с использованием React и TypeScript, REST API, маршрутизации, авторизации пользователей и управления избранными фильмами.
+
+Проект реализован в соответствии с техническим заданием и успешно принят по итогам проверки.
